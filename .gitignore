@@ -1,0 +1,29 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local tools and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated logs, vector indexes, and ingestion fingerprints
+logs/
+*.log
+chroma_db/
+md5.text
