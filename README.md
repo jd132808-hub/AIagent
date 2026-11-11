@@ -2,6 +2,13 @@
 
 基于 Streamlit、LangChain Agent 和 RAG 的扫地机器人智能客服项目，使用 DeepSeek 对话模型、Ollama 本地嵌入模型与 Chroma 向量数据库。
 
+## 版本
+
+- [原始版本 v1.0-original](https://github.com/jd132808-hub/AIagent/tree/v1.0-original)：保留首次上传的完整代码与知识库资料。
+- [新版 v1.1.0](https://github.com/jd132808-hub/AIagent/tree/v1.1.0)：优化 Streamlit 界面，支持快捷提问、对话导出、失败重试和逐字显示回答，修复 Python 新版本的导入兼容问题。
+
+`main` 分支用于当前版本；历史版本通过上述标签查看和下载。
+
 ## 功能
 
 - 通过 Streamlit 聊天界面咨询选购、使用、维护和故障排除问题。
@@ -24,12 +31,12 @@ utils/          路径、配置、文件和日志工具
 
 ## 本地运行
 
-建议使用 Python 3.11。当前项目未提供依赖锁文件，以下为根据源码导入整理的依赖，具体版本需在本地验证：
+建议使用 Python 3.11 或更新版本。使用依赖清单安装项目所需的软件包（该清单不是精确版本锁文件）：
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install streamlit langchain langchain-core langchain-community langchain-openai langchain-ollama langchain-chroma langchain-text-splitters langgraph pyyaml pypdf dashscope sympy sqlalchemy
+python -m pip install -r requirements.txt
 ```
 
 安装并启动 Ollama，下载配置中使用的嵌入模型：

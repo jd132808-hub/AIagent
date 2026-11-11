@@ -2,12 +2,9 @@
 """
 总结服务类：用户提问，搜索参考资料，将提问和参考资料传入模型，生成回答，并返回给用户。
 """
-from itertools import chain
-from lib2to3.fixes.fix_input import context
-from xml.dom.minidom import Document
+from langchain_core.documents import Document
 
 from langchain_core.output_parsers import StrOutputParser
-from sqlalchemy.util import counter
 
 from rag.vector_store import VectorStoreService
 from utils.prompt_loader import load_rag_prompts

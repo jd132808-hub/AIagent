@@ -1,6 +1,5 @@
 from utils.logger_handler import logger
 from utils.prompt_loader import load_system_prompts, load_report_prompts
-from dashscope.model import Model
 from langchain.agents import AgentState
 from langgraph.runtime import Runtime
 from langgraph.types import Command

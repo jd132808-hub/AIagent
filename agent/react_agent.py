@@ -27,7 +27,11 @@ class ReactAgent:
         # 第三个参数context就是上下文runtime中的信息，就是我们做提示词切换的标记
         for chunk in self.agent.stream(input_dict, stream_mode="values", context={"report": False}):
             latest_message = chunk["messages"][-1]
-            if latest_message.content:
+            # Show assistant answers without echoing user messages or tool results.
+            if (latest_message.type == "ai"
+                    and not getattr(latest_message, "tool_calls", None)
+                    and isinstance(latest_message.content, str)
+                    and latest_message.content.strip()):
                 yield latest_message.content.strip() + "\n"
 
 # if __name__ == '__main__':

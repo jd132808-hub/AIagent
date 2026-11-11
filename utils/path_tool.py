@@ -2,10 +2,6 @@
 为整个项目提供统一的绝对路径
 """
 import os
-from email.contentmanager import maintype
-
-from dashscope.acli.extensions import current
-from sympy.core.evalf import get_abs
 
 
 def get_project_root() -> str:

@@ -1,4 +1,4 @@
-from xml.dom.minidom import Document
+from langchain_core.documents import Document
 from utils.path_tool import get_abs_path
 import os
 from utils.file_handler import pdf_loader, txt_loader,listdir_with_allowed_type,get_file_md5_hex
